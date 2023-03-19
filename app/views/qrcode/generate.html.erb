@@ -6,11 +6,11 @@
     <%= turbo_frame_tag "qrcode_generate" do %>
       <%= form_with url: qrcode_generate_url, method: :get, class: "qrcode-form col-12" do |form| %>
         <div class="row text-center d-sm-flex justify-content-center">
-          <div class="input col-sm-4 col-12">
+          <div class="input col-sm-4 col-12 mb-1">
             <%= form.label :query, "#{I18n.t("qrcode.content.input")}:" %>
             <%= form.text_field :query, placeholder:  I18n.t("qrcode.content.form.field.placeholder") %>
           </div>
-          <div class="submit col-sm-2 col-12 mt-1">
+          <div class="submit col-sm-2 col-12">
             <%= form.submit I18n.t("qrcode.content.submit") %>
           </div>
         </div>

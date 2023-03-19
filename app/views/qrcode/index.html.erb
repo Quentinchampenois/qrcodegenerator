@@ -1,5 +1,5 @@
 <main class="qrcode container-fluid">
-  <div class="heading row">
+  <div class="heading row mb-3">
     <div class="col text-center">
       <h1><%= I18n.t("qrcode.content.title") %></h1>
     </div>
@@ -9,11 +9,11 @@
     <%= turbo_frame_tag "qrcode_generate", class: "row" do %>
       <%= form_with url: qrcode_generate_url, method: :get, class: "qrcode-form col-12" do |form| %>
         <div class="row text-center d-sm-flex justify-content-center">
-            <div class="input col-sm-4 col-12">
+            <div class="input col-sm-4 col-12 mb-1">
               <%= form.label :query, "#{I18n.t("qrcode.content.input")}:" %>
               <%= form.text_field :query, placeholder:  I18n.t("qrcode.content.form.field.placeholder") %>
             </div>
-            <div class="submit col-sm-2 col-12  mt-1">
+            <div class="submit col-sm-2 col-12">
               <%= form.submit I18n.t("qrcode.content.submit") %>
             </div>
         </div>
