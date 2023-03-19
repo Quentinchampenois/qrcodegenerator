@@ -1,16 +1,22 @@
-<h1>Generate</h1>
+  <div class="heading col-12">
+    <h1><%= I18n.t("qrcode.content.title") %></h1>
+  </div>
 
-<%= turbo_frame_tag "qrcode_generate" do %>
-  <div>
-    <%= form_with url: qrcode_generate_url, method: :get do |form| %>
-      <%= form.label :query, "#{I18n.t("qrcode.content.input")}:" %>
-      <%= form.text_field :query %>
-      <%= form.submit I18n.t("qrcode.content.submit") %>
+  <div class="content col-12 d-flex justify-content-center">
+    <%= turbo_frame_tag "qrcode_generate" do %>
+      <%= form_with url: qrcode_generate_url, method: :get, class: "qrcode-form row" do |form| %>
+        <div class="input col-10">
+          <%= form.label :query, "#{I18n.t("qrcode.content.input")}:" %>
+          <%= form.text_field :query, placeholder: I18n.t("qrcode.content.form.field.placeholder") %>
+        </div>
+        <div class="submit col-2 ">
+          <%= form.submit I18n.t("qrcode.content.submit") %>
+        </div>
+      <% end %>
+
+      <div>
+        <%== @svg %>
+      </div>
     <% end %>
-
   </div>
-
-  <div>
-    <%== @svg %>
   </div>
-<% end %>
