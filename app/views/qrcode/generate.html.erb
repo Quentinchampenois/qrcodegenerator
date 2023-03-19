@@ -10,14 +10,14 @@
             <%= form.label :query, "#{I18n.t("qrcode.content.input")}:" %>
             <%= form.text_field :query, placeholder:  I18n.t("qrcode.content.form.field.placeholder") %>
           </div>
-          <div class="submit col-sm-2 col-12">
+          <div class="submit col-sm-2 col-12 mt-1">
             <%= form.submit I18n.t("qrcode.content.submit") %>
           </div>
         </div>
       <% end %>
 
-      <div class="col-12">
-        <%== @svg %>
+      <div class="col-12 d-flex justify-content-center">
+        <%= image_tag @svg, style: "max-width:100%" %>
       </div>
     <% end %>
   </div>

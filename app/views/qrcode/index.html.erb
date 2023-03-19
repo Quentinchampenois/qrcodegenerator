@@ -1,6 +1,6 @@
 <main class="qrcode container-fluid">
   <div class="heading row">
-    <div class="col">
+    <div class="col text-center">
       <h1><%= I18n.t("qrcode.content.title") %></h1>
     </div>
   </div>
@@ -13,7 +13,7 @@
               <%= form.label :query, "#{I18n.t("qrcode.content.input")}:" %>
               <%= form.text_field :query, placeholder:  I18n.t("qrcode.content.form.field.placeholder") %>
             </div>
-            <div class="submit col-sm-2 col-12">
+            <div class="submit col-sm-2 col-12  mt-1">
               <%= form.submit I18n.t("qrcode.content.submit") %>
             </div>
         </div>
