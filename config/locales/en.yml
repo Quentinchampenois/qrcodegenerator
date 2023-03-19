@@ -3,6 +3,7 @@ en:
     content:
       title: "Generate a new QRCode"
       input: "Type query here"
+      download: "Download as PNG"
       submit: "Submit"
       form:
         field:
