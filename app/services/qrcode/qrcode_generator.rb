@@ -1,10 +1,11 @@
 module Qrcode
   class QrcodeGenerator < ApplicationService
-    attr_accessor :format
+    attr_accessor :format, :filename
 
     def initialize(input, format=:png)
       @input = input
       @format = format
+      @filename = "qrcode_#{Time.now.strftime("%d-%m-%H-%M-%S")}.#{format}"
       @qrcode = RQRCode::QRCode.new(@input)
     end
 

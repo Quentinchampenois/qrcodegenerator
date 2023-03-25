@@ -17,11 +17,11 @@
       <% end %>
 
       <div class="col-12 d-flex justify-content-center">
-        <%= image_tag @svg, style: "max-width:100%" %>
+        <%= image_tag @qrcode_gen, style: "max-width:100%" %>
       </div>
 
       <div class="col-12 d-flex justify-content-center">
-        <%= link_to I18n.t("qrcode.content.download"), @svg, :action => :download, download: @filename %>
+        <%= link_to I18n.t("qrcode.content.download"), @qrcode_gen, :action => :download, download: @qrcode.filename %>
       </div>
     <% end %>
   </div>

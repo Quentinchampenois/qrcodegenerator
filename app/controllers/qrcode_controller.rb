@@ -4,8 +4,7 @@ class QrcodeController < ApplicationController
 
   def generate
     @query = params["query"] || ""
-    @filename = "qrcode_#{Time.now.strftime("%d_%m_%H_%M")}.png"
-
-    @svg = Qrcode::QrcodeGenerator.call(@query)
+    @qrcode = Qrcode::QrcodeGenerator.new(@query)
+    @qrcode_gen = @qrcode.render_qrcode
   end
 end
