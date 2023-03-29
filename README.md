@@ -1,24 +1,32 @@
-# README
+# QRCode Generator
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Light Rails application to convert String to QRCode easily based on [RQRCode]().
 
-Things you may want to cover:
+## Why ? 
 
-* Ruby version
+This is a discover of [Rails 7]() and [turbo-streams feature](). This application only contains one route, user have a simple text input and a submit button. Idea is to provide a secure tool to create QRCode easily.
 
-* System dependencies
+It generates a QRCode as PNG thanks to RQRCode gem.
 
-* Configuration
 
-* Database creation
+> **Note**
+> This project will not evolve
 
-* Database initialization
+## Getting started
 
-* How to run the test suite
+If you want to run application locally : 
 
-* Services (job queues, cache servers, search engines, etc.)
+1. Clone repository
+2. Install ruby dependencies : `bundle install`
+3. Create database : `bundle exec rake db:create db:migrate`
+4. Run application : `bundle exec rails s`
 
-* Deployment instructions
+🚀 Application starts and is reachable at http://localhost:3000
 
-* ...
+## Contributing
+
+Contributions are welcome, any idea or feature. 
+
+## License
+
+[See license](./LICENSE)
