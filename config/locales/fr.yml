@@ -1,0 +1,10 @@
+fr:
+  qrcode:
+    content:
+      title: "Générer un QRCODE"
+      input: "Lien à générer"
+      download: "Télécharger en PNG"
+      submit: "Créer"
+      form:
+        field:
+          placeholder: "https://google.fr"
